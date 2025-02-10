@@ -1,0 +1,1 @@
+This is jsut all of the notes from week 11 to week 14 (munue 14.8) for lancaster leipzig foundation year of computer science

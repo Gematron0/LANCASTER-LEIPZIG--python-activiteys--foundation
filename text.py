@@ -75,3 +75,9 @@ dict6 = {
 
 if 200 in dict6.values():
     print("yes")
+
+dict7 = {
+    'city': 'new york'
+}
+
+dict7['location'] = dict7.pop['city']

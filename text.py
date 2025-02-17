@@ -53,3 +53,16 @@ defalts = {'designation': 'developer', 'salary': 80000}
 thisdict = dict.fromkeys(employees, defalts)
 print(thisdict)
 
+keys = ['keys', 'salary']
+
+Dict5 = {
+    'name': 'kelly',
+    'age': 25,
+    'salary': 8000,
+    'city': 'new york'
+}
+
+keys = ['name', 'salary']
+for k in keys:
+    Dict5.pop(k)
+print(Dict5)

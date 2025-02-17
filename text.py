@@ -66,3 +66,12 @@ keys = ['name', 'salary']
 for k in keys:
     Dict5.pop(k)
 print(Dict5)
+
+dict6 = {
+    'a': 100,
+    'b': 200,
+    'c': 300
+}
+
+if 200 in dict6.values():
+    print("yes")

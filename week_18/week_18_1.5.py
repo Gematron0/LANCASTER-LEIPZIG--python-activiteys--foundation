@@ -12,3 +12,6 @@ for x in topScorstuple:
     t += 1
     if x == False:
         print(studentList[t])
+
+studentList.append("froth")
+submitedTests.add(False)

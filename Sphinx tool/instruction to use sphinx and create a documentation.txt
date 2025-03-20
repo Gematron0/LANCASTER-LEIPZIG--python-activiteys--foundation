@@ -1,0 +1,79 @@
+To install Sphinx
+
+Pip install -U sphinx
+
+
+to check the version
+
+sphinx-build --version
+
+to install specific theme
+
+pip install sphinx_rtd_theme
+sphinx-pdj-theme
+
+
+
+1 step: put your code files which has docstrings in the folder.
+2 step: once created the folder make the "docs" folder in the main folder.
+3 step: Go to the command prompt with the complete path of your project in the docs folder. i.e., project1\docs 
+
+4 step: type the command sphinx-quickstart
+5 step: enter all the project details
+6 step: it will create files confg.py, index.rst, Makefile, make.bat.
+7 step: open conf.py and make the following modification in it....
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+
+8 step: put the above code in the conf.py file above the project Information section.
+
+9 step: Go to the general section in the conf.py file and update the extension list with the following values.
+
+extensions = ['sphinx.ext.todo','sphinx.ext.viewcode','sphinx.ext.autodoc']
+
+10 step: if you want to change the theme first install the specific them using Pip command in the command prompt and then in the -- Options for HTML output section upgrade the html_theme variable with the desired theme name that you want to use.
+
+
+11 step: go to the command prompt again and make sure your directory path is the docs. type the following command sphinx-apidoc -o . .. and then press enter.
+
+12 step: some rst files are created i.e., your code files with rst extension and the modules.rst.
+
+13 step: now first open the modules.rst file and check if your code files names are added in it.
+
+14 step: now open index.rst file and under the following code add modules.rst name without the extension.
+
+example:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   modules
+
+15 step: after that save the changes and get back to command prompt and them give the following command:
+
+make html and then press enter
+
+it will make the html files and will tell you if everything is successfully done.
+
+Note: if there are any issues with your code files or docstrings the documentation generated will not work properly so please make sure to check the code for errors and make corrections.
+
+16 step: now open the index.html file form the build\html folder.
+
+17 step: your code documentation is ready.congrats!!!
+
+18 step: if you make changes later on with the project just use the make html command in order to update the html pages.
+
+
+
+
+Welcome to Raza's documentation!
+================================
+.. _Introduction:
+.. toctree::
+   :maxdepth: 2
+   :caption: Introduction:
+   
+   introduction
+
